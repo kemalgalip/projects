@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* LIST ITEMS */
+    --RED: hsl(0, 100%, 67%);
+    --ORANGE: hsl(39, 100%, 56%);
+    --GREEN: hsl(166, 100%, 37%);
+    --BLUE: hsl(234, 85%, 45%);
+
+    /* BACKGROUND COLORS */
+    --LIGHT-SLATE-BLUE: hsl(252, 100%, 67%);
+    --LIGHT-ROYAL-BLUE: hsl(241, 81%, 54%);
+
+    --VIOLET-BLUE: hsla(256, 72%, 46%, 1);
+    --PERSIAN-BLUE: hsla(241, 72%, 46%, 0);
+
+    /* */
+    --WHITE: hsl(0, 0%, 100%);
+    --PALE-BLUE: hsl(221, 100%, 96%);
+    --LIGHT-LAVENDER: hsl(241, 100%, 89%);
+    --DARK-GRAY-BLUE: hsl(224, 30%, 27%);
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Hanken Grotesk', sans-serif;
+    color: var(--WHITE);
+}
+
+h2 {
+    font-size: 1.5rem;
+    line-height: 0.5;
+}
+
+h3 {
+    font-size: 1rem;
+    color: var(--LIGHT-LAVENDER);
+}
+
+p {
+    text-align: center;
+}
+
+button {
+    color: var(--WHITE);
+    background-color: var(--DARK-GRAY-BLUE);
+    min-width: 225px;
+    padding: 0.75rem;
+    border-radius: 25px;
+    margin-top: 0.5rem;
+    border: none;
+}
+
+button:hover, button:focus-within {
+    background-image: linear-gradient(var(--LIGHT-SLATE-BLUE), var(--LIGHT-ROYAL-BLUE));
+    cursor: pointer;
+}
+
+/* || CLASSES */
+
+.table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 15px 20px var(--LIGHT-LAVENDER);
+}
+
+.main {
+    background-image: linear-gradient(var(--LIGHT-SLATE-BLUE), var(--LIGHT-ROYAL-BLUE));
+    border-radius: 20px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding: 1.75rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    gap: 1.5rem;
+}
+
+.score_board {
+    font-size: 3rem;
+    font-weight: 800;
+    background-image: linear-gradient(var(--VIOLET-BLUE), var(--LIGHT-ROYAL-BLUE));
+    border-radius: 50%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 125px;
+    height: 125px;
+    line-height: 1;
+    padding-top: 0.25rem;
+}
+
+.out_of {
+    font-size: 0.65rem;
+    color: var(--LIGHT-LAVENDER);
+}
+
+.percentage {
+    color: var(--LIGHT-LAVENDER);
+    padding: 0.75rem;
+    padding-top: 0;
+    font-size: 0.75rem;
+    width: 190px
+}
+
+.stats {
+    color: var(--DARK-GRAY-BLUE);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 0.85rem;
+    align-items: stretch;
+    gap: 0.75rem;
+}
+
+.summary {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--DARK-GRAY-BLUE);
+}
+
+section.reaction {
+    background-color: hsla(0, 100%, 67%, 0.1);
+    border-radius: 7.5px;
+    padding: 0.65rem;
+    display: flex;
+    align-items: center;
+    color: var(--RED);
+}
+
+p.reaction {
+    margin-left: 0.5rem;
+    margin-right: auto;
+}
+
+section.memory {
+    background-color: hsla(39, 100%, 56%, 0.1);
+    border-radius: 7.5px;
+    padding: 0.65rem;
+    display: flex;
+    align-items: center;
+    color: var(--ORANGE);
+}
+
+p.memory {
+    margin-left: 0.5rem;
+    margin-right: auto;
+}
+
+section.verbal {
+    background-color: hsla(166, 100%, 37%, 0.1);
+    border-radius: 7.5px;
+    padding: 0.65rem;
+    display: flex;
+    align-items: center;
+    color: var(--GREEN);
+}
+
+p.verbal {
+    margin-left: 0.5rem;
+    margin-right: auto;
+}
+
+section.visual {
+    background-color: hsla(234, 85%, 45%, 0.1);
+    border-radius: 7.5px;
+    padding: 0.65rem;
+    display: flex;
+    align-items: center;
+    color: var(--BLUE);
+}
+
+p.visual {
+    margin-left: 0.5rem;
+    margin-right: auto;
+}
+
+.dark {
+    color: var(--DARK-GRAY-BLUE);
+    font-weight: 700;
+}
+
+.light {
+    color: hsl(241, 100%, 82%);
+    font-weight: 700;
+}
+
+@media screen and (max-width: 425px) {
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    button {
+        font-size: 1.25rem;
+        padding-top: 1.1rem;
+        padding-bottom: 1.1rem;
+        border-radius: 35px;
+        margin-top: 1rem;
+    }
+
+    .table {
+        flex-flow: column;
+        width: 100%;
+        height: 100vh;
+        align-items: stretch;
+        justify-content: flex-start;
+        box-shadow: none;
+    }
+
+    .main {
+        border-radius: 0px 0px 20px 20px;
+    }
+
+    .percentage {
+        font-size: 0.9rem;
+    }
+
+    .stats {
+        width: 100%;
+        font-size: 1.25rem;
+        margin-top: 1rem;
+        padding-bottom: 1.25rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .summary {
+        font-size: 1.25rem;
+    }
+
+    section.reaction {
+        background-color: hsla(0, 100%, 67%, 0.1);
+        border-radius: 7.5px;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        color: var(--RED);
+    }
+    
+    p.reaction {
+        margin-left: 1rem;
+        margin-right: auto;
+    }
+    
+    section.memory {
+        background-color: hsla(39, 100%, 56%, 0.1);
+        border-radius: 7.5px;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        color: var(--ORANGE);
+    }
+    
+    p.memory {
+        margin-left: 1rem;
+        margin-right: auto;
+    }
+    
+    section.verbal {
+        background-color: hsla(166, 100%, 37%, 0.1);
+        border-radius: 7.5px;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        color: var(--GREEN);
+    }
+    
+    p.verbal {
+        margin-left: 1rem;
+        margin-right: auto;
+    }
+    
+    section.visual {
+        background-color: hsla(234, 85%, 45%, 0.1);
+        border-radius: 7.5px;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        color: var(--BLUE);
+    }
+    
+    p.visual {
+        margin-left: 1rem;
+        margin-right: auto;
+    }
+}
