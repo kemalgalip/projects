@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* || VARIABLES */
+
+:root {
+    /* COLORS */
+    --BLACK: rgb(60, 60, 60);
+    --XCOLOR: #E94141;
+    --OBLUE: #0086F4;
+    --GRID-COLOR: #629ACC;
+}
+
+/* || GENERAL */
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    color: var(--BLACK);
+    margin-top: 35px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 3rem;
+    text-align: center;
+}
+
+button {
+    background-color: lightgray;
+    border: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+p {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* || CLASSES */
+
+.choose {
+    display: flex;
+}
+
+.selected {
+    background-color: rgb(180, 180, 180);
+}
+
+.X {
+    position: absolute;
+    background-color: var(--XCOLOR);
+    width: 50px;
+    height: 6px;
+    border-radius: 6px;
+    transform: rotate(45deg);
+}
+
+.X::before {
+    content: "";
+    position: absolute;
+    background-color: var(--XCOLOR);
+    width: 50px;
+    height: 6px;
+    border-radius: 6px;
+    transform: translateX(-25px) rotate(90deg);
+}
+
+.O {
+    width: 46px;
+    height: 46px;
+    border: 6px solid var(--OBLUE);
+    border-radius: 30px;
+}
+
+.table {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+.box {
+    background-color: lightgray;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.box_X {
+    position: absolute;
+    background-color: var(--XCOLOR);
+    width: 65px;
+    height: 8px;
+    border-radius: 6px;
+    transform: rotate(45deg);
+}
+
+.box_X::before {
+    content: "";
+    position: absolute;
+    background-color: var(--XCOLOR);
+    width: 65px;
+    height: 8px;
+    border-radius: 6px;
+    transform: rotate(90deg);
+}
+
+.box_O {
+    width: 55px;
+    height: 55px;
+    border: 8px solid var(--OBLUE);
+    border-radius: 30px;
+}
+
+.scoreboard {
+    color: var(--BLACK);
+    margin-bottom: 35px;
+    padding-left: 40px;
+    width: 320px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.stat_box {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#X, #O {
+    margin: 15px;
+    width: 75px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
