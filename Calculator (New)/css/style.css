@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* || CLASSES */
+
+.frame {
+    background-color: gray;
+    padding: 20px;
+    width: 430px;
+    border-radius: 25px;
+    box-shadow: 5px 6px 0px 4px rgb(94, 94, 94);
+}
+
+.screen {
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+    background-color: rgb(113, 204, 239);
+    height: 155px;
+    margin-bottom: 20px;
+    padding-right: 5px;
+    padding-left: 5px;
+    border-radius: 10px;
+    transform: translate(-2px, -3px);
+    box-shadow: 3px 4px 0px 2px rgb(68, 173, 215);
+}
+
+.screen .operation {
+    font-size: 25px;
+    height: 50px;
+    margin-bottom: 5px;
+    padding-top: 10px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.screen .operation p {
+    overflow-x: scroll;
+}
+
+.screen p.input_digits_p:hover, .screen p.operation_p:hover {
+    cursor: pointer;
+}
+
+.screen .input_digits {
+    font-size: 45px;
+    height: 100px;
+    padding-top: 10px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.screen .input_digits p {
+    overflow-x: scroll;
+}
+
+.button_grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(10px, 90px));
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+.button_grid button, #dot {
+    font-family: 'Orbitron', sans-serif;
+    border: transparent;
+    height: 100px;
+    background-color: rgb(240, 240, 240);
+    color: rgb(54, 54, 54);
+    font-size: 40px;
+    border-radius: 15px;
+    transform: translate(-2px, -3px);
+    box-shadow: 3px 4px 0px 2px rgb(210, 210, 210);
+}
+
+.button_grid button.operator {
+    background-color: rgb(94, 94, 94);
+    color: lightgray;
+    box-shadow: 3px 4px 0px 2px rgb(78, 78, 78);    
+}
+
+#equal {
+    background-color: rgb(255, 97, 123);
+    color: whitesmoke;
+    box-shadow: 3px 4px 0px 2px rgb(255, 78, 107);
+}
+
+.button_grid button:hover, .button_grid button:focus-visible, #dot:hover, #dot:focus-visible {
+    background-color: rgb(234, 234, 234);
+    cursor: pointer;
+}
+
+.button_grid button:active, #dot:active {
+    background-color: rgb(230, 230, 230);
+    transform: translate(0, -1px);
+    box-shadow: 1px 2px 0px 2px rgb(210, 210, 210);
+}
+
+.button_grid button.operator:hover, .button_grid button.operator:focus-visible {
+    background-color: rgb(98, 98, 98);
+    cursor: pointer;
+}
+
+.button_grid button.operator:active {
+    background-color: rgb(86, 86, 86);
+    box-shadow: 1px 2px 0px 2px rgb(78, 78, 78);
+}
+
+.button_grid button#equal:hover, .button_grid button#equal:focus-visible {
+    background-color: rgb(255, 103, 128);
+    cursor: pointer;
+}
+
+.button_grid button#equal:active {
+    background-color: rgb(255, 94, 120);
+    box-shadow: 1px 2px 0px 2px rgb(255, 78, 107);
+}
+
+::-webkit-scrollbar {
+    height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: hsla(0, 0%, 96%, 0.5);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: hsla(0, 0%, 96%, 0.7);
+}
+
+@media screen and (max-width: 425px) {
+    .frame {
+        width: 100%;
+        min-height: 100vh;
+        border-radius: 0;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+    }
+}
