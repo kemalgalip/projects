@@ -24,4 +24,4 @@ function atTheMoment() {
     second.textContent = currentSecond;
 };
 
-setInterval(atTheMoment, 200);
+setInterval(atTheMoment, 1000);
