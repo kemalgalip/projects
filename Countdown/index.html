@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Kemal Galip">
+    <meta name="description" content="Countdown website">
+    <title>Countdown</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/main.js"></script>
+</head>
+
+<body>
+    <div class="timeup_popup">
+        <h2>Time is up!</h2>
+        <button id="close_popup">Close</button>
+    </div>
+
+    <h1>Countdown</h1>
+
+    <section class="count_section">
+        <section class="digits_section">
+            <div class="up updown" id="up_hour"></div>
+            <p class="digits" id="hour">00</p>
+            <div class="down updown" id="down_hour"></div>
+            <p class="hms">Hour</p>
+        </section>
+        <section class="digits_section">
+            <div class="up updown" id="up_minute"></div>
+            <p class="digits" id="minute">00</p>
+            <div class="down updown" id="down_minute"></div>
+            <p class="hms">Minute</p>
+        </section>
+        <section class="digits_section">
+            <div class="up updown" id="up_second"></div>
+            <p class="digits" id="second">00</p>
+            <div class="down updown" id="down_second"></div>
+            <p class="hms">Second</p>
+        </section>
+    </section>
+
+    <section class="buttons">
+        <button class="button" id="start">Start</button>
+        <button class="button" id="stop">Stop</button>
+        <button class="button" id="reset">Reset</button>
+    </section>
+</body>
+</html>
